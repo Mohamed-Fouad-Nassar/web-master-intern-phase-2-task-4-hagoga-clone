@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
 
     <!-- Marhey font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
     />
 
     <!-- tailwind css -->
-    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="../css/output.css" />
 
     <!-- tailwind cdn -->
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -38,10 +38,10 @@
       }
     </style> -->
 
-    <title>Hagoga Restaurant | Home</title>
+    <title>Hagoga Restaurant | About</title>
   </head>
 
-  <body class="font-marhey relative" id="home">
+  <body class="font-marhey relative" id="about">
     <!-- start header section -->
     <header
       class="bg-black/75 text-white absolute top-0 left-0 right-0 z-20 h-fit"
@@ -75,8 +75,8 @@
         class="py-2 px-4 container mx-auto relative flex gap-8 justify-between items-center"
       >
         <div class="max-w-20">
-          <a href="#home">
-            <img src="./assets/logo.png" alt="logo-image" />
+          <a href="/">
+            <img src="../assets/logo.png" alt="logo-image" />
           </a>
         </div>
 
@@ -92,34 +92,35 @@
             <ul class="flex flex-col md:flex-row gap-6">
               <li>
                 <a
-                  href="#home"
-                  class="block text-primary relative md:before:absolute before:-bottom-2 before:w-full before:h-0.5 before:bg-primary before:transition-all"
+                  href="/"
+                  class="block relative md:before:absolute before:-bottom-2 before:w-0 before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
                   >الرئيسيه</a
                 >
               </li>
               <li>
                 <a
-                  href="./html/about.html"
-                  class="block relative md:before:absolute before:-bottom-2 before:w-0 before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
+                  href="#about"
+                  class="block text-primary relative md:before:absolute before:-bottom-2 before:w-full before:h-0.5 before:bg-primary before:transition-all"
                   >عن حجوجه</a
                 >
               </li>
               <li>
                 <a
-                  href="./html/menu.html"
+                  href="./menu.html"
                   class="block relative md:before:absolute before:-bottom-2 before:w-0 before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
                   >منيو حجوجه</a
                 >
               </li>
               <li>
                 <a
-                  href="./html/contact.html"
+                  href="./contact.html"
                   class="block relative md:before:absolute before:-bottom-2 before:w-0 before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
                   >تواصل معانا</a
                 >
               </li>
             </ul>
           </nav>
+
           <div
             class="flex gap-2 pt-4 md:pt-0 md:pr-3 md:mr-3 md:border-r-2 border-gray-400"
           >
@@ -141,190 +142,76 @@
 
     <!-- start main section -->
     <main>
-      <!-- start hero section -->
+      <!-- start heading section -->
       <section
-        class="min-h-screen flex justify-center items-center text-white text-center bg-[url(../assets/banner.png)] bg-no-repeat bg-cover bg-fixed bg-center relative after:absolute after:inset-0 after:bg-black/20"
+        class="min-h-[45dvh] flex justify-center items-center text-white text-center bg-[url(../assets/daily-deals-bg.png)] bg-no-repeat bg-cover bg-fixed bg-center relative after:absolute after:inset-0 after:bg-black/40"
       >
-        <div class="py-2 px-4 container mx-auto relative space-y-6 z-10">
-          <h2 class="text-4xl md:text-8xl font-bold">حجوجة اصل الاكل</h2>
-          <p class="text-xl md:text-3xl font-semibold">
-            <span
-              class="inline-block relative before:hidden md:before:block before:content-[''] before:absolute before:top-1/2 before:left-[120px] before:w-40 before:h-0.5 before:bg-white after:hidden md:after:block after:w-2.5 after:h-2.5 after:bg-white after:absolute after:top-1/2 after:-translate-y-1/2 after:left-[280px] after:rounded-full"
-              >البيتى</span
-            >
-            <span
-              class="inline-block mx-4 w-3 h-3 bg-white rounded-full"
-            ></span>
-            <span
-              class="inline-block relative before:hidden md:before:block before:content-[''] before:absolute before:top-1/2 before:right-[140px] before:w-40 before:h-0.5 before:bg-white after:hidden md:after:block after:w-2.5 after:h-2.5 after:bg-white after:absolute after:top-1/2 after:-translate-y-1/2 after:right-[300px] after:rounded-full"
-              >الفلاحى</span
-            >
+        <div class="py-2 px-4 container mx-auto relative space-y-4 z-10">
+          <h2 class="mt-20 text-4xl md:text-6xl font-medium">عن حجوجة</h2>
+          <span
+            class="block mx-auto w-3.5 h-3.5 rounded-full border-[2px] border-white relative bg-transparent before:w-32 before:h-0.5 before:bg-white before:absolute before:top-1/2 before:-translate-y-1/2 before:right-6 after:w-32 after:h-0.5 after:bg-white after:absolute after:top-1/2 after:-translate-y-1/2 after:left-6"
+          ></span>
+          <p class="text-gray-200">
+            استمتع بتناول الطعام البيتي والفلاحي في أجواء رمضان
           </p>
-
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="#" class="btn-primary">قائمة طعام حجوجه</a>
-            <a href="#" class="btn-secondary">احجز الان</a>
-          </div>
         </div>
       </section>
-      <!-- end hero section -->
+      <!-- end heading section -->
 
-      <!-- start about section -->
+      <!-- start content section -->
       <section
-        class="py-20 bg-[url(../assets/sec-bg.png)] backdrop-brightness-[0.90] relative before:absolute before:top-0 before:left-0 before:right-0 before:bg-[url(../assets/border.png)] before:bg-cover before:h-6 before:z-20 after:absolute after:bottom-0 after:left-0 after:right-0 after:bg-[url(../assets/border.png)] after:bg-cover after:h-6 after:z-20"
+        class="py-20 bg-[url(../assets/sec-bg.png)] backdrop-brightness-[0.90] relative before:absolute before:top-0 before:left-0 before:right-0 before:bg-[url(../assets/border.png)] before:bg-cover before:h-6 before:z-20"
       >
         <div class="absolute inset-0 bg-white/70 -z-10"></div>
         <div
-          class="py-2 px-4 container mx-auto flex flex-col md:flex-row justify-center items-center gap-6 *:flex-1"
+          class="py-2 px-4 container mx-auto flex flex-col md:flex-row justify-center items-start gap-6 *:flex-1"
         >
-          <div>
-            <img src="./assets/our-story.png" alt="about-sec-image" />
-          </div>
-          <div class="text-gray-800 text-center space-y-6">
-            <span class="text-primary">اكتشف</span>
-            <h2 class="text-7xl font-bold">عن حجوجه</h2>
-            <span class="text-xl font-semibold">مرحبًا بكم في حجوجه</span>
-            <p class="mt-4 text-gray-600">
+          <div class="space-y-3">
+            <span class="block text-center text-primary text-lg"
+              >مرحبًا بكم في حجوجه</span
+            >
+            <h2 class="mb-8 text-center text-6xl font-bold">عن حجوجة</h2>
+            <p class="text-gray-600">
               نحن هنا لنأخذكم في رحلة ممتعة وشهية في عالم الطعام الأصيل
               والمبتكر. في مطعم حجوجه، نقدم لكم لمسة من الحنين إلى طعم البيت
               وروح الفلاحين، مع لمسة من الإبداع والتجديد في كل طبق
             </p>
+            <p class="text-gray-600">
+              نحن نؤمن بقوة الطعام في توحيد الناس وتعزيز الروابط الاجتماعية. من
+              خلال مجموعة متنوعة من الأطباق الشهية والمتوازنة، نسعى لإشباع جميع
+              الأذواق وتلبية توقعات كل ضيف.
+            </p>
+            <p class="text-gray-600">
+              تعالوا واستمتعوا في أجواء مرحة وودية، حيث يمكنكم الاستمتاع بتجربة
+              تناول الطعام لا تُنسى وتبادل الضحكات والذكريات. نحن هنا لنجعل كل
+              لحظة تقضونها في حجوجه تجربة فريدة ومميزة.
+            </p>
+
+            <h3 class="font-medium">احجز مكانك في حجوجه الآن</h3>
+            <span>! الطريقة للحجز عبر الموقع الإلكتروني:</span>
+            <ol class="mt-2 list-decimal ms-8 text-gray-600">
+              <li>اختر الأيام المتاحة: تحقق من التواريخ المتاحة للحجز.</li>
+              <li>
+                أضف عناصر القائمة: أضف العناصر المفضلة لديك، بما في ذلك الأطباق
+                الخاصة والمشروبات.
+              </li>
+              <li>
+                ادفع عبر الإنترنت: انتقل إلى الخروج وادفع المبلغ الكامل لتأمين
+                حجزك.
+              </li>
+              <li>
+                استمتع بتجربة فريدة: استمتع بتجربة تناول الطعام المميزة مع
+                عائلتك وأصدقائك.
+              </li>
+            </ol>
+          </div>
+
+          <div class="md:mt-20">
+            <img src="../assets/our-story.png" alt="about-us-image" />
           </div>
         </div>
       </section>
-      <!-- end about section -->
-
-      <!-- start daily deals section -->
-      <section
-        class="py-20 bg-[url(../assets/daily-deals-bg.png)] bg-fixed relative before:absolute before:inset-0 before:bg-black/60"
-      >
-        <div
-          class="relative py-2 px-4 container mx-auto text-white flex flex-col md:flex-row justify-center items-start gap-6 *:flex-1 z-10"
-        >
-          <div>
-            <img src="./assets/daily-deals.png" alt="daily-deals-image" />
-          </div>
-          <div>
-            <span class="text-primary">مطعم حجوجة</span>
-            <h2 class="mt-3 text-5xl font-bold">العروض اليومية</h2>
-          </div>
-        </div>
-      </section>
-      <!-- end daily deals section -->
-
-      <!-- start menu section -->
-      <section class="py-20">
-        <div class="py-2 px-4 container mx-auto">
-          <div class="text-center">
-            <span class="text-primary">مطعم حجوجة</span>
-            <h2 class="mt-3 mb-6 text-5xl font-medium">استطعم بافضل الاسعار</h2>
-            <div
-              id="home-categories"
-              class="max-w-[85%] mx-auto flex flex-wrap justify-center gap-4 *:cursor-pointer *:px-2 *:py-1 *:hover:text-primary"
-            ></div>
-          </div>
-
-          <div
-            id="home-menu-items"
-            class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          ></div>
-        </div>
-      </section>
-      <!-- end menu section -->
-
-      <!-- start services section -->
-      <section
-        class="min-h-[60dvh] py-20 bg-[url(../assets/services-bg.png)] bg-no-repeat bg-cover bg-fixed bg-center relative before:absolute before:inset-0 before:bg-black/60"
-      >
-        <div
-          class="relative py-2 px-4 container mx-auto text-white text-center z-10"
-        >
-          <h2 class="text-6xl font-medium">افضل خدمات حجوجة</h2>
-
-          <div
-            class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            <!-- item 1 -->
-            <div class="group flex flex-col gap-4 justify-between">
-              <div
-                class="relative max-w-32 mx-auto p-8 border border-dashed border-gray-400 rounded-full aspect-square transition-all group-hover:bg-primary/40"
-              >
-                <span
-                  class="w-8 h-8 rounded-full text-black bg-white border-2 border-white flex justify-center items-center absolute top-0 left-0 transition-all group-hover:bg-primary group-hover:text-white"
-                  >4</span
-                >
-                <img src="./assets/service-1.png" alt="service-image" />
-              </div>
-              <h3 class="text-3xl text-primary font-medium">
-                اختر الأيام المتاحة
-              </h3>
-              <span class="text-sm">تحقق من التواريخ المتاحة للحجز</span>
-            </div>
-
-            <!-- item 2 -->
-            <div class="group flex flex-col gap-4 justify-between">
-              <div
-                class="relative max-w-32 mx-auto p-8 border border-dashed border-gray-400 rounded-full aspect-square transition-all group-hover:bg-primary/40"
-              >
-                <span
-                  class="w-8 h-8 rounded-full text-black bg-white border-2 border-white flex justify-center items-center absolute top-0 left-0 transition-all group-hover:bg-primary group-hover:text-white"
-                  >6</span
-                >
-
-                <img src="./assets/service-2.png" alt="service-image" />
-              </div>
-              <h3 class="text-3xl text-primary font-medium">
-                أضف عناصر القائمة
-              </h3>
-              <span class="text-sm"
-                >أضف العناصر المفضلة لديك، بما في ذلك الأطباق الخاصة
-                والمشروبات</span
-              >
-            </div>
-
-            <!-- item 1 -->
-            <div class="group flex flex-col gap-4 justify-between">
-              <div
-                class="relative max-w-32 mx-auto p-8 border border-dashed border-gray-400 rounded-full aspect-square transition-all group-hover:bg-primary/40"
-              >
-                <span
-                  class="w-8 h-8 rounded-full text-black bg-white border-2 border-white flex justify-center items-center absolute top-0 left-0 transition-all group-hover:bg-primary group-hover:text-white"
-                  >2</span
-                >
-
-                <img src="./assets/service-3.png" alt="service-image" />
-              </div>
-              <h3 class="text-3xl text-primary font-medium">
-                ادفع عبر الإنترنت
-              </h3>
-              <span class="text-sm"
-                >انتقل إلى الخروج وادفع المبلغ الكامل لتأمين حجزك</span
-              >
-            </div>
-
-            <!-- item 1 -->
-            <div class="group flex flex-col gap-4 justify-between">
-              <div
-                class="relative max-w-32 mx-auto p-8 border border-dashed border-gray-400 rounded-full aspect-square transition-all group-hover:bg-primary/40"
-              >
-                <span
-                  class="w-8 h-8 rounded-full text-black bg-white border-2 border-white flex justify-center items-center absolute top-0 left-0 transition-all group-hover:bg-primary group-hover:text-white"
-                  >11</span
-                >
-
-                <img src="./assets/service-4.png" alt="service-image" />
-              </div>
-              <h3 class="text-3xl text-primary font-medium">
-                استمتع بتجربة فريدة
-              </h3>
-              <span class="text-sm"
-                >استمتع بتجربة تناول الطعام المميزة مع عائلتك وأصدقائك</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end services section -->
+      <!-- end content section -->
 
       <!-- start subscription section -->
       <section
@@ -369,8 +256,8 @@
       <div class="py-2 px-4 container mx-auto relative z-10">
         <div class="mb-10 flex justify-between items-center gap-4">
           <div class="max-w-20">
-            <a href="#home">
-              <img src="./assets/logo.png" alt="logo-image" />
+            <a href="/">
+              <img src="../assets/logo.png" alt="logo-image" />
             </a>
           </div>
           <div class="flex gap-4">
@@ -436,7 +323,7 @@
 
     <!-- start scroll to top button -->
     <a
-      href="#home"
+      href="#about"
       id="scroll-to-top-btn"
       class="scale-0 transition-all fixed w-11 h-11 rounded-full border-[3px] border-white flex justify-center items-center bottom-10 right-10 bg-primary text-white hover:bg-primary/90 z-50 group"
     >
@@ -456,9 +343,6 @@
     </script>
 
     <!-- layout js -->
-    <script src="./js/layout.js"></script>
-
-    <script src="./js/data.js" type="module"></script>
-    <script src="./js/home.js" type="module"></script>
+    <script src="../js/layout.js"></script>
   </body>
 </html>

@@ -2,6 +2,7 @@
 const navMenu = document.getElementById("nav-menu");
 const navMenuToggle = document.getElementById("nav-menu-toggle");
 const scrollToTopBtn = document.getElementById("scroll-to-top-btn");
+const subscriptionForm = document.getElementById("subscription-form");
 
 // handle open/close menu
 navMenuToggle.addEventListener("click", (e) => {
@@ -35,3 +36,6 @@ window.addEventListener("scroll", () => {
     scrollToTopBtn.classList.add("scale-0");
   }
 });
+
+// prevent submitting form
+subscriptionForm.addEventListener("submit", (e) => e.preventDefault());

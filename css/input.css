@@ -15,4 +15,8 @@
   .btn-outline {
     @apply min-w-52 px-4 py-2 border border-primary bg-transparent text-white rounded-full;
   }
+
+  .active {
+    @apply !opacity-100;
+  }
 }
