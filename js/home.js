@@ -28,8 +28,8 @@ homeCategoriesBtns.forEach((btn) => {
       return product.categoryId == selectedCategoryId;
     });
 
-    console.log("selectedCategoryId: ", selectedCategoryId);
-    console.log("selectedProducts: ", selectedProducts);
+    // console.log("selectedCategoryId: ", selectedCategoryId);
+    // console.log("selectedProducts: ", selectedProducts);
 
     // toggle active class to active btn
     homeCategoriesBtns.forEach((btn) => btn.classList.remove("text-primary"));
@@ -41,7 +41,7 @@ homeCategoriesBtns.forEach((btn) => {
 
 // create rendered products
 function renderProducts(selectedProducts) {
-  console.log("selectedProducts: ", selectedProducts);
+  // console.log("selectedProducts: ", selectedProducts);
 
   homeMenuItemsContainer.innerHTML = "";
 
@@ -107,6 +107,6 @@ function renderProducts(selectedProducts) {
     menuItem.append(menuItemImage, menuItemInfo);
 
     homeMenuItemsContainer.append(menuItem);
-    console.log("homeMenuItemsContainer: ", homeMenuItemsContainer);
+    // console.log("homeMenuItemsContainer: ", homeMenuItemsContainer);
   });
 }
