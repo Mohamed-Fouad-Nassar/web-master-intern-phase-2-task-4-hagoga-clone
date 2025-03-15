@@ -22,15 +22,24 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+console.log(swiper);
 
 // handle initial render
 swiper.on("init", () => {
   renderProducts(products.filter((product) => product.categoryId === 1));
+  console.log(
+    "swiper initialized products: ",
+    products.filter((product) => product.categoryId === 1)
+  );
 });
 swiper.emit("init");
 
 // handle on change the active slide
 swiper.on("slideChange", () => {
+  console.log(swiper);
+  console.log("swiper active index: ", swiper?.activeIndex);
+  console.log("swiper active index: ", swiper?.activeIndex);
+
   // Ensure we have a valid swiper instance
   if (!swiper || !swiper.slides) return;
 
@@ -49,6 +58,10 @@ swiper.on("slideChange", () => {
 
   const categoryId = swiper.activeIndex + 1;
   renderProducts(
+    products.filter((product) => product.categoryId === categoryId)
+  );
+  console.log(
+    "Selected products: ",
     products.filter((product) => product.categoryId === categoryId)
   );
 });
@@ -91,9 +104,12 @@ const menuCategoriesSlides = categories.map(({ id, image }, i) => {
   return containerDiv;
 });
 menuCategories.append(...menuCategoriesSlides);
+console.log("menuCategories: ", menuCategories);
 
 // create rendered products
 function renderProducts(selectedProducts) {
+  console.log("selectedProducts: ", selectedProducts);
+
   menuItemsContainer.innerHTML = "";
 
   if (selectedProducts.length === 0) {
@@ -138,5 +154,6 @@ function renderProducts(selectedProducts) {
     menuItem.append(price);
 
     menuItemsContainer.append(menuItem);
+    console.log("menuItemsContainer: ", menuItemsContainer);
   });
 }
