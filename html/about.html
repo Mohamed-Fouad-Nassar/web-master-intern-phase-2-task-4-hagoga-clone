@@ -75,7 +75,7 @@
         class="py-2 px-4 container mx-auto relative flex gap-8 justify-between items-center"
       >
         <div class="max-w-20">
-          <a href="/">
+          <a href="../index.html">
             <img src="../assets/logo.png" alt="logo-image" />
           </a>
         </div>
@@ -92,7 +92,7 @@
             <ul class="flex flex-col md:flex-row gap-6">
               <li>
                 <a
-                  href="/"
+                  href="../index.html"
                   class="block relative md:before:absolute before:-bottom-2 before:w-0 before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
                   >الرئيسيه</a
                 >
@@ -256,7 +256,7 @@
       <div class="py-2 px-4 container mx-auto relative z-10">
         <div class="mb-10 flex justify-between items-center gap-4">
           <div class="max-w-20">
-            <a href="/">
+            <a href="../index.html">
               <img src="../assets/logo.png" alt="logo-image" />
             </a>
           </div>
@@ -337,9 +337,15 @@
     <!-- lucide cdn Development version -->
     <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
     <!-- lucide cdn Production version -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
-      lucide.createIcons();
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.lucide) {
+          lucide.createIcons();
+        } else {
+          console.error("Lucide is not loaded!");
+        }
+      });
     </script>
 
     <!-- layout js -->
