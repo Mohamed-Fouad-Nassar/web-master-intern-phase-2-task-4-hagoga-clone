@@ -87,6 +87,7 @@ function renderCartItems() {
       item.quantity = parseInt(e.target.value);
       localStorage.setItem("cart", JSON.stringify(cart));
       getTotalPrice();
+      getCartCount();
     });
     cartItemControls.append(cartItemCount);
     const cartItemRemove = document.createElement("button");

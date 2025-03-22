@@ -9,8 +9,9 @@ const wishlistCount = document.getElementById("wishlist-count");
 
 export function getCartCount() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cartCount.textContent = cart.length;
-  return cart.length;
+  const count = cart?.reduce((acc, item) => acc + item.quantity, 0) || 0;
+  cartCount.textContent = count;
+  return count;
 }
 
 export function getWishlistCount() {
