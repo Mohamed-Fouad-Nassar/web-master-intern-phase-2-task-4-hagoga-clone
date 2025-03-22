@@ -1,3 +1,5 @@
+import { getCartCount } from "./layout.js";
+
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 
@@ -6,7 +8,6 @@ function renderCartItems() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   cartItemsContainer.innerHTML = "";
-  let total = 0;
 
   if (!cart || cart.length === 0) {
     const noItems = document.createElement("p");
@@ -130,6 +131,7 @@ function removeItem(item) {
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCartItems();
   getTotalPrice();
+  getCartCount();
   lucide.createIcons();
 }
 
