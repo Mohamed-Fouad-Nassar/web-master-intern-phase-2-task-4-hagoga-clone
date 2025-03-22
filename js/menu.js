@@ -1,3 +1,4 @@
+import { renderProducts } from "./global.js";
 import { categories, products } from "./data.js";
 
 const menuItemsContainer = document.getElementById("menu-items");
@@ -22,24 +23,18 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
-// console.log(swiper);
 
 // handle initial render
 swiper.on("init", () => {
-  renderProducts(products.filter((product) => product.categoryId === 1));
-  // console.log(
-  // "swiper initialized products: ",
-  // products.filter((product) => product.categoryId === 1)
-  // );
+  renderProducts(
+    products.filter((product) => product.categoryId === 1),
+    menuItemsContainer
+  );
 });
 swiper.emit("init");
 
 // handle on change the active slide
 swiper.on("slideChange", () => {
-  // console.log(swiper);
-  // console.log("swiper active index: ", swiper?.activeIndex);
-  // console.log("swiper active index: ", swiper?.activeIndex);
-
   // Ensure we have a valid swiper instance
   if (!swiper || !swiper.slides) return;
 
@@ -58,12 +53,11 @@ swiper.on("slideChange", () => {
 
   const categoryId = swiper.activeIndex + 1;
   renderProducts(
-    products.filter((product) => product.categoryId === categoryId)
+    products.filter((product) => product.categoryId === categoryId),
+    menuItemsContainer
   );
-  // console.log(
-  // "Selected products: ",
-  // products.filter((product) => product.categoryId === categoryId)
-  // );
+
+  lucide.createIcons();
 });
 
 // create menu categories slider slides
@@ -104,56 +98,3 @@ const menuCategoriesSlides = categories.map(({ id, image }, i) => {
   return containerDiv;
 });
 menuCategories.append(...menuCategoriesSlides);
-// console.log("menuCategories: ", menuCategories);
-
-// create rendered products
-function renderProducts(selectedProducts) {
-  // console.log("selectedProducts: ", selectedProducts);
-
-  menuItemsContainer.innerHTML = "";
-
-  if (selectedProducts.length === 0) {
-    const noItems = document.createElement("p");
-    noItems.classList.add(
-      "text-center",
-      "text-bold",
-      "text-2xl",
-      "text-gray-400"
-    );
-    noItems.textContent = "لا يوجد منتجات";
-    menuItemsContainer.append(noItems);
-    return;
-  }
-
-  selectedProducts.forEach((product) => {
-    const menuItem = document.createElement("div");
-    menuItem.classList.add(
-      "flex",
-      "flex-col",
-      "items-center",
-      "pb-3",
-      "border",
-      "border-gray-200",
-      "rounded"
-    );
-
-    const img = document.createElement("img");
-    img.classList.add("max-w-full");
-    img.src = `.${product.image}`;
-    img.alt = product.title;
-    menuItem.append(img);
-
-    const title = document.createElement("h3");
-    title.classList.add("mt-2", "mb-4", "font-medium");
-    title.textContent = product.title;
-    menuItem.append(title);
-
-    const price = document.createElement("span");
-    price.classList.add("text-primary");
-    price.textContent = product.price + " حنيه";
-    menuItem.append(price);
-
-    menuItemsContainer.append(menuItem);
-    // console.log("menuItemsContainer: ", menuItemsContainer);
-  });
-}

@@ -59,13 +59,13 @@
           </a>
         </div>
 
-        <button id="nav-menu-toggle" class="md:hidden cursor-pointer">
+        <!-- <button id="nav-menu-toggle" class="md:hidden cursor-pointer">
           <i data-lucide="align-justify" class="size-8"></i>
-        </button>
+        </button> -->
 
         <div
           id="nav-menu"
-          class="hidden absolute z-20 top-[100px] py-6 px-8 left-2 right-2 rounded bg-black/90 md:static md:bg-transparent md:p-0 md:flex flex-1 justify-between items-center"
+          class="hidden absolute z-20 top-[100px] py-6 px-8 left-2 right-2 rounded bg-black/90 md:static md:bg-transparent md:p-0 md:flex justify-between items-center"
         >
           <nav>
             <ul class="flex flex-col md:flex-row gap-6">
@@ -100,7 +100,7 @@
             </ul>
           </nav>
 
-          <div
+          <!-- <div
             class="flex gap-2 pt-4 md:pt-0 md:pr-3 md:mr-3 md:border-r-2 border-gray-400"
           >
             <a
@@ -112,7 +112,40 @@
             <a href="#login" class="btn-outline min-w-fit rounded-md text-sm">
               تسجيل الدخول
             </a>
-          </div>
+          </div> -->
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="./cart.html" class="relative">
+            <i data-lucide="shopping-cart" class="size-6"></i>
+            <span
+              id="cart-count"
+              class="absolute -top-4 -right-3 flex justify-center items-center w-6 h-6 rounded-full bg-primary text-xs shadow-lg"
+            >
+              0
+            </span>
+            <span class="sr-only">العربة</span>
+          </a>
+
+          <a href="./wishlist.html" class="relative">
+            <i data-lucide="heart" class="size-6"></i>
+            <span
+              id="wishlist-count"
+              class="absolute -top-4 -right-3 flex justify-center items-center w-6 h-6 rounded-full bg-primary text-xs shadow-lg"
+            >
+              0
+            </span>
+            <span class="sr-only">قائمة أمنيات</span>
+          </a>
+
+          <button
+            type="button"
+            id="nav-menu-toggle"
+            class="md:hidden cursor-pointer"
+          >
+            <div class="sr-only">القائمة</div>
+            <i data-lucide="align-justify" class="size-8"></i>
+          </button>
         </div>
       </section>
       <!-- end nav section -->
@@ -326,6 +359,6 @@
     </script>
 
     <!-- layout js -->
-    <script src="../js/layout.js"></script>
+    <script src="../js/layout.js" type="module"></script>
   </body>
 </html>

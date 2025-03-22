@@ -4,6 +4,27 @@ const navMenuToggle = document.getElementById("nav-menu-toggle");
 const scrollToTopBtn = document.getElementById("scroll-to-top-btn");
 const subscriptionForm = document.getElementById("subscription-form");
 
+const cartCount = document.getElementById("cart-count");
+const wishlistCount = document.getElementById("wishlist-count");
+
+export function getCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartCount.textContent = cart.length;
+  return cart.length;
+}
+
+export function getWishlistCount() {
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  wishlistCount.textContent = wishlist.length;
+  return wishlist.length;
+}
+
+// Initialize counts on page load
+document.addEventListener("DOMContentLoaded", () => {
+  getCartCount();
+  getWishlistCount();
+});
+
 // handle open/close menu
 navMenuToggle.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -38,4 +59,4 @@ window.addEventListener("scroll", () => {
 });
 
 // prevent submitting form
-subscriptionForm.addEventListener("submit", (e) => e.preventDefault());
+subscriptionForm?.addEventListener("submit", (e) => e.preventDefault());

@@ -17,10 +17,10 @@
     <!-- tailwind css -->
     <link rel="stylesheet" href="../css/output.css" />
 
-    <title>Hagoga Restaurant | Contact</title>
+    <title>Hagoga Restaurant | Cart</title>
   </head>
 
-  <body class="font-marhey relative" id="contact">
+  <body class="font-marhey relative" id="cart">
     <!-- start header section -->
     <header
       class="bg-black/75 text-white absolute top-0 left-0 right-0 z-20 h-fit"
@@ -92,8 +92,8 @@
               </li>
               <li>
                 <a
-                  href="#contact"
-                  class="block text-primary relative md:before:absolute before:-bottom-2 before:w-full before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
+                  href="./contact.html"
+                  class="block relative md:before:absolute before:-bottom-2 before:w-0 before:h-0.5 before:bg-primary before:transition-all hover:before:w-full"
                   >تواصل معانا</a
                 >
               </li>
@@ -116,7 +116,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-          <a href="./cart.html" class="relative">
+          <a href="#cart" class="relative">
             <i data-lucide="shopping-cart" class="size-6"></i>
             <span
               id="cart-count"
@@ -159,7 +159,7 @@
         class="min-h-[45dvh] flex justify-center items-center text-white text-center bg-[url(../assets/daily-deals-bg.png)] bg-no-repeat bg-cover bg-fixed bg-center relative after:absolute after:inset-0 after:bg-black/40"
       >
         <div class="py-2 px-4 container mx-auto relative space-y-4 z-10">
-          <h2 class="mt-20 text-4xl md:text-6xl font-medium">تواصل معنا</h2>
+          <h2 class="mt-20 text-4xl md:text-6xl font-medium">عربة التسوق</h2>
           <span
             class="block mx-auto w-3.5 h-3.5 rounded-full border-[2px] border-white relative bg-transparent before:w-32 before:h-0.5 before:bg-white before:absolute before:top-1/2 before:-translate-y-1/2 before:right-6 after:w-32 after:h-0.5 after:bg-white after:absolute after:top-1/2 after:-translate-y-1/2 after:left-6"
           ></span>
@@ -171,171 +171,46 @@
       <!-- end heading section -->
 
       <!-- start content section -->
-      <section class="py-20">
-        <div
-          class="py-2 px-4 container mx-auto flex flex-col md:flex-row justify-center items-start gap-8"
-        >
-          <div class="flex-1 w-full md:flex-1/4">
-            <h3
-              class="text-4xl md:text-5xl mb-20 relative before:absolute before:right-0 before:-bottom-8 before:h-[1px] before:bg-primary before:w-36"
-            >
-              ابقى على اتصال بنا
-            </h3>
-
-            <form
-              id="contact-form"
-              class="w-full bg-white px-4 py-6 border-4 border-zinc-300 space-y-4"
-            >
-              <!-- input container -->
-              <div class="flex items-center py-2 group bg-gray-100">
-                <i
-                  data-lucide="user"
-                  class="size-5 mx-2 text-zinc-400 fill-zinc-400 group-hover:text-zinc-900 group-hover:fill-zinc-900 group-focus-within:text-zinc-900 group-focus-within:fill-zinc-900"
-                ></i>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="الاسم بالكامل"
-                  class="placeholder:text-zinc-400 w-full outline-none px-4 py-0.5 border-r border-zinc-300"
-                />
-              </div>
-
-              <!-- input container -->
-              <div class="flex items-center py-2 group bg-gray-100">
-                <i
-                  data-lucide="mail"
-                  class="size-5 mx-2 text-gray-100 fill-zinc-400 group-hover:fill-zinc-900 group-focus-within:fill-zinc-900"
-                ></i>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="البريد الالكترونى"
-                  class="placeholder:text-zinc-400 w-full outline-none px-4 py-0.5 border-r border-zinc-300"
-                />
-              </div>
-
-              <!-- input container -->
-              <div class="flex items-center py-2 group bg-gray-100">
-                <i
-                  data-lucide="phone"
-                  class="size-5 mx-2 text-gray-100 fill-zinc-400 group-hover:fill-zinc-900 group-focus-within:fill-zinc-900"
-                ></i>
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="رقم الهاتف"
-                  class="placeholder:text-zinc-400 w-full outline-none px-4 py-0.5 border-r border-zinc-300"
-                />
-              </div>
-
-              <textarea
-                name="message"
-                placeholder="الرسالة"
-                rows="5"
-                class="w-full px-4 py-3 bg-gray-100 outline-none placeholder:text-zinc-400"
-              ></textarea>
-
-              <button
-                type="submit"
-                class="px-6 py-3 cursor-pointer bg-primary text-white rounded-full text-sm hover:underline hover:bg-primary/90"
-              >
-                ارسل رسالتك
-              </button>
-            </form>
-          </div>
-
-          <div class="flex-1">
-            <h3
-              class="text-4xl md:text-5xl mb-20 relative before:absolute before:right-0 before:-bottom-8 before:h-[1px] before:bg-primary before:w-36"
-            >
-              معلومات الاتصال
-            </h3>
-
-            <div class="space-y-6">
-              <!-- item 1 -->
-              <div class="group flex gap-4 items-start">
-                <div
-                  class="w-14 h-14 rounded-full text-primary bg-gray-100 flex justify-center items-center border-4 border-transparent transition-all group-hover:border-white group-hover:bg-primary group-hover:text-white group-hover:shadow-xl"
-                >
-                  <i data-lucide="map-pin"></i>
-                </div>
-                <div class="flex-1">
-                  <h4 class="font-medium mb-2">العنوان</h4>
-                  <p class="text-gray-500 text-sm">
-                    حديقة المدفعية، شارع الصاعقة، دخلة شيراتون من طريق السويس،
-                    امام موقف ٤ ونص مساكن
-                  </p>
-                </div>
-              </div>
-
-              <!-- item 2 -->
-              <div class="group flex gap-4 items-start">
-                <div
-                  class="w-14 h-14 rounded-full text-primary bg-gray-100 flex justify-center items-center border-4 border-transparent transition-all group-hover:border-white group-hover:bg-primary group-hover:text-white group-hover:shadow-xl"
-                >
-                  <i data-lucide="phone"></i>
-                </div>
-                <div class="flex-1">
-                  <h4 class="font-medium mb-2">رقم الهاتف</h4>
-                  <p class="text-gray-500 text-sm">(012) 8005 5200</p>
-                </div>
-              </div>
-
-              <!-- item 3 -->
-              <div class="group flex gap-4 items-start">
-                <div
-                  class="w-14 h-14 rounded-full text-primary bg-gray-100 flex justify-center items-center border-4 border-transparent transition-all group-hover:border-white group-hover:bg-primary group-hover:text-white group-hover:shadow-xl"
-                >
-                  <i data-lucide="mail"></i>
-                </div>
-                <div class="flex-1">
-                  <h4 class="font-medium mb-2">البريد الألكترونى</h4>
-                  <p class="text-gray-500 text-sm">
-                    admin@Hagoga.com
-                    <br />
-                    support@Hagoga.com
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end content section -->
-
-      <!-- start subscription section -->
       <section
         class="py-20 bg-[url(../assets/sec-bg.png)] backdrop-brightness-[0.90] relative before:absolute before:top-0 before:left-0 before:right-0 before:bg-[url(../assets/border.png)] before:bg-cover before:h-6 before:z-20 after:absolute after:bottom-0 after:left-0 after:right-0 after:bg-[url(../assets/border.png)] after:bg-cover after:h-6 after:z-20"
       >
         <div class="absolute inset-0 bg-white/70 -z-10"></div>
-        <div
-          class="py-2 px-4 container mx-auto flex flex-col md:flex-row justify-center items-center gap-6 *:flex-1"
-        >
-          <div>
-            <h3 class="text-3xl font-medium">اشترك معنا الان</h3>
-            <span class="text-gray-600"
-              >احصل على المزيد من الأخبار والأطباق الشهية يوميًا من خلالنا</span
+
+        <div class="py-2 px-4 container mx-auto">
+          <div id="cart-items" class="space-y-4 divide-y divide-gray-300">
+            <!-- item 1 -->
+            <!-- <div
+              class="pb-4 flex flex-col sm:flex-row items-center sm:items-start gap-4"
             >
-          </div>
-          <div>
-            <form
-              id="subscription-form"
-              class="min-w-[360px] flex gap-4 px-4 py-2 bg-gray-200"
-            >
-              <input
-                type="email"
-                name="email"
-                placeholder="البريد الألكترونى"
-                class="flex-1 outline-none"
+              <img
+                src="../assets/food-1.png"
+                alt="item-image"
+                class="max-w-[200px]"
               />
-              <button class="pr-4 border-r border-gray-300 cursor-pointer">
-                <i data-lucide="send" class="size-4 text-primary"></i>
-              </button>
-            </form>
+
+              <div class="mt-2 flex-1">
+                <h3 class="text-lg">ربع كفته ضانى سبشيال</h3>
+                <p class="text-gray-600">175.44 حنيه</p>
+              </div>
+
+              <select
+                class="max-w-fit mt-2 block px-3 py-1 border border-gray-300 rounded-md"
+                name="item-count"
+                id="item-count"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div> -->
           </div>
+
+          <div id="cart-total" class="hidden"></div>
         </div>
       </section>
-      <!-- end subscription section -->
+      <!-- end content section -->
     </main>
     <!-- end main section -->
 
@@ -413,7 +288,7 @@
 
     <!-- start scroll to top button -->
     <a
-      href="#contact"
+      href="#cart"
       id="scroll-to-top-btn"
       class="scale-0 transition-all fixed w-11 h-11 rounded-full border-[3px] border-white flex justify-center items-center bottom-10 right-10 bg-primary text-white hover:bg-primary/90 z-50 group"
     >
@@ -438,11 +313,8 @@
 
     <!-- layout js -->
     <script src="../js/layout.js" type="module"></script>
-    <!-- contact script -->
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", (e) => e.preventDefault());
-    </script>
+
+    <!-- cart js -->
+    <script src="../js/cart.js" type="module"></script>
   </body>
 </html>

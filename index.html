@@ -59,13 +59,13 @@
           </a>
         </div>
 
-        <button id="nav-menu-toggle" class="md:hidden cursor-pointer">
+        <!-- <button id="nav-menu-toggle" class="md:hidden cursor-pointer">
           <i data-lucide="align-justify" class="size-8"></i>
-        </button>
+        </button> -->
 
         <div
           id="nav-menu"
-          class="hidden absolute z-20 top-[100px] py-6 px-8 left-2 right-2 rounded bg-black/90 md:static md:bg-transparent md:p-0 md:flex flex-1 justify-between items-center"
+          class="hidden absolute z-20 top-[100px] py-6 px-8 left-2 right-2 rounded bg-black/90 md:static md:bg-transparent md:p-0 md:flex justify-between items-center"
         >
           <nav>
             <ul class="flex flex-col md:flex-row gap-6">
@@ -99,7 +99,7 @@
               </li>
             </ul>
           </nav>
-          <div
+          <!-- <div
             class="flex gap-2 pt-4 md:pt-0 md:pr-3 md:mr-3 md:border-r-2 border-gray-400"
           >
             <a
@@ -111,7 +111,40 @@
             <a href="#login" class="btn-outline min-w-fit rounded-md text-sm">
               تسجيل الدخول
             </a>
-          </div>
+          </div> -->
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="./html/cart.html" class="relative">
+            <i data-lucide="shopping-cart" class="size-6"></i>
+            <span
+              id="cart-count"
+              class="absolute -top-4 -right-3 flex justify-center items-center w-6 h-6 rounded-full bg-primary text-xs shadow-lg"
+            >
+              0
+            </span>
+            <span class="sr-only">العربة</span>
+          </a>
+
+          <a href="./html/wishlist.html" class="relative">
+            <i data-lucide="heart" class="size-6"></i>
+            <span
+              id="wishlist-count"
+              class="absolute -top-4 -right-3 flex justify-center items-center w-6 h-6 rounded-full bg-primary text-xs shadow-lg"
+            >
+              0
+            </span>
+            <span class="sr-only">قائمة أمنيات</span>
+          </a>
+
+          <button
+            type="button"
+            id="nav-menu-toggle"
+            class="md:hidden cursor-pointer"
+          >
+            <div class="sr-only">القائمة</div>
+            <i data-lucide="align-justify" class="size-8"></i>
+          </button>
         </div>
       </section>
       <!-- end nav section -->
@@ -141,8 +174,8 @@
           </p>
 
           <div class="flex flex-wrap justify-center gap-3">
-            <a href="#" class="btn-primary">قائمة طعام حجوجه</a>
-            <a href="#" class="btn-secondary">احجز الان</a>
+            <a href="/html/menu.html" class="btn-primary">قائمة طعام حجوجه</a>
+            <a href="/html/contact.html" class="btn-secondary">احجز الان</a>
           </div>
         </div>
       </section>
@@ -175,7 +208,7 @@
 
       <!-- start daily deals section -->
       <section
-        class="py-20 bg-[url(../assets/daily-deals-bg.png)] bg-fixed relative before:absolute before:inset-0 before:bg-black/60"
+        class="py-20 bg-[url(../assets/daily-deals-bg.png)] bg-fixed bg-cover bg-center bg-no-repeat relative before:absolute before:inset-0 before:bg-black/60"
       >
         <div
           class="relative py-2 px-4 container mx-auto text-white flex flex-col md:flex-row justify-center items-start gap-6 *:flex-1 z-10"
@@ -439,7 +472,7 @@
     </script>
 
     <!-- layout js -->
-    <script src="./js/layout.js"></script>
+    <script src="./js/layout.js" type="module"></script>
 
     <script src="./js/data.js" type="module"></script>
     <script src="./js/home.js" type="module"></script>
